@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem Solved</title>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Heebo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+      color: #333;
+      direction: rtl;
+    }
+
+    header {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #2b63d9;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 20px;
+    }
+    .project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* מרכז את התמונה ואת הטקסט */
+  text-align: center;  /* מיישר את הטקסט לאמצע */
+}
+
+    .projects img {
+      width: 300px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+
+.project-caption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+    .steps {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .steps h2 {
+      text-align: center;
+      color: #2b63d9;
+      margin-bottom: 1.5rem;
+    }
+
+    .step {
+      background: #ffffff;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-right: 4px solid #2b63d9;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      border-radius: 6px;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-form {
+      background-color: #ffffff;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 2rem auto;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+      resize: none;
+    }
+
+    .contact-form button {
+      background-color: #2b63d9;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .contact-form button:hover {
+      background-color: #244fb4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Problem Solved</h1>
+    <p>יש לך בעיה במכונה שחוזרת על עצמה? הגעת למקום הנכון – אני אפתור לך אותה.</p>
+  </header>
+  <section class="steps">
+<h2>מבין הפרויקטים שכבר ביצענו</h2>
+</section>
+  <section class="projects">
+  <div class="project-item">
+    <img src="measureplat2.jpg" alt="פרויקט 1">
+    <p>מד גובה</p>
+  </div>
+  <div class="project-item">
+    <img src="close flap.jpg" alt="פרויקט 2">
+    <p >כף מודולרית</p>
+  </div>
+  <div class="project-item">
+    <img src="griper.jpg" alt="פרויקט 3">
+    <p>מנגנון פתיחת ארגזים</p>
+  </div>
+  <div class="project-item">
+    <img src="tension.jpg" alt="פרויקט 4">
+    <p>מותחן פולי</p>
+  </div>
+</section>
+
+  <section class="steps">
+    <h2>שיטת העבודה לפתרון בעיות</h2>
+
+    <div class="step">
+      <strong>1. הגדרת הבעיה</strong>
+      איסוף מידע מהלקוח, תיעוד תקלות קיימות, הגדרת הצורך התפעולי ובחינת הגבלות מכניות, חשמליות או סביבתיות.
+    </div>
+
+    <div class="step">
+      <strong>2. פיתוח רעיונות לפתרון</strong>
+      סיעור מוחות, בחינת פתרונות קיימים, גיבוש קונספטים הנדסיים בהתאם לדרישות ולתקציב.
+    </div>
+
+    <div class="step">
+      <strong>3. תכנון ויצירת מודל ממוחשב</strong>
+      תכנון תלת-ממדי באמצעות תוכנות CAD, סימולציה של תנועה, חוזק והתאמה מבנית.
+    </div>
+
+    <div class="step">
+      <strong>4. פיתוח אב-טיפוס ובדיקות</strong>
+      הדפסת אב-טיפוס FDM/Resin, הרכבה ובדיקות פונקציונליות לאימות הרעיון.
+    </div>
+
+    <div class="step">
+      <strong>5. הפקת שרטוטי ייצור</strong>
+      שרטוטים טכניים עם מידות, סובלנציות, חומרים והוראות ייצור.
+    </div>
+
+    <div class="step">
+      <strong>6. ייצור החלק</strong>
+      ייצור בעיבוד שבבי, לייזר, כיפוף, הדפסה או טכנולוגיה נדרשת.
+    </div>
+
+    <div class="step">
+      <strong>7. הרכבה ובדיקת תקינות</strong>
+      שילוב החלק במערכת, בדיקות תפקוד והתאמות לפני מסירה.
+    </div>
+  </section>
+
+  <section class="contact-form">
+ 
+    <form action="https://formsubmit.co/roigofman@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="http://localhost:5500/thankyou.html">
+  <h2 style="text-align: center;">צור קשר</h2>
+  <input type="text" name="name" placeholder="שם" required>
+  <input type="email" name="email" placeholder="אימייל" required>
+  <input type="tel" name="phone" placeholder="טלפון" required>
+  <textarea name="message" rows="5" placeholder="איך אוכל לעזור?" required></textarea>
+  <button type="submit">שלח</button>
+</form>
+
+  </section>
+</body>
+</html>
