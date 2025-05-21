@@ -140,7 +140,7 @@
     <p>יש לך בעיה במכונה שחוזרת על עצמה? הגעת למקום הנכון – אני אפתור לך אותה.</p>
   </header>
   <section class="steps">
-<h2>מבין הפרויקטים שכבר ביצענו</h2>
+<h2>מבין הפרויקטים שכבר ביצענו במערכות אוטומציה מהמובילות בישראל</h2>
 </section>
   <section class="projects">
   <div class="project-item">
@@ -160,6 +160,30 @@
     <p>מותחן פולי</p>
   </div>
 </section>
+
+  <section class="steps">
+<h2>כחלק מהשלבים לפתירת הבעיה אנו מציעים</h2>
+</section>
+
+<section class="projects">
+  <div class="project-item">
+    <img src="שרטוט2.jpg" alt="שרטוט 2">
+    <p>מודל תלת מימד ממוחשב</p>
+  </div>
+
+  <div class="project-item">
+    <img src="3d_print.jpg" alt="שרטוט 1">
+    <p>אב-טיפוס באמצעות הדפסת תלת מימד</p>
+  </div>
+
+  <div class="project-item">
+    <img src="drawing1.png" alt="שרטוט 3">
+    <p>שרטוטים לייצור תעשייתי</p>
+  </div>
+  
+  
+</section>
+
 
   <section class="steps">
     <h2>שיטת העבודה לפתרון בעיות</h2>
@@ -201,10 +225,13 @@
   </section>
 
   <section class="contact-form">
- 
-    <form action="https://formsubmit.co/roigofman@gmail.com" method="POST">
+ <form action="https://formsubmit.co/roigofman@gmail.com" method="POST">
+  <!-- מבטל CAPTCHA -->
   <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="http://localhost:5500/thankyou.html">
+  
+  <!-- מפנה לדף תודה אחרי השליחה -->
+  <input type="hidden" name="_next" value="thankyou.html">
+
   <h2 style="text-align: center;">צור קשר</h2>
   <input type="text" name="name" placeholder="שם" required>
   <input type="email" name="email" placeholder="אימייל" required>
@@ -212,6 +239,7 @@
   <textarea name="message" rows="5" placeholder="איך אוכל לעזור?" required></textarea>
   <button type="submit">שלח</button>
 </form>
+
 
   </section>
 </body>
