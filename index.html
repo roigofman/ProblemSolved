@@ -132,6 +132,39 @@
     .contact-form button:hover {
       background-color: #244fb4;
     }
+
+    .modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); /* רקע כהה */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  direction: rtl;
+  font-family: Arial;
+}
+
+.close-button {
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
   </style>
 </head>
 <body>
@@ -225,14 +258,8 @@
   </section>
 
   <section class="contact-form">
- <form action="https://formsubmit.co/roigofman@gmail.com" method="POST">
-  <!-- מבטל CAPTCHA -->
+ <form id="contact-form">
   <input type="hidden" name="_captcha" value="false">
-  
-  <!-- מפנה לדף תודה אחרי השליחה -->
-  <input type="hidden" name="_next" value="https://roigofman.github.io/ProblemSolved/thankyou.html">
-
-
   <h2 style="text-align: center;">צור קשר</h2>
   <input type="text" name="name" placeholder="שם" required>
   <input type="email" name="email" placeholder="אימייל" required>
@@ -240,8 +267,56 @@
   <textarea name="message" rows="5" placeholder="איך אוכל לעזור?" required></textarea>
   <button type="submit">שלח</button>
 </form>
-
-
   </section>
+<div id="thankyou-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>תודה על פנייתך!</h2>
+    <p>ההודעה נשלחה בהצלחה. נחזור אליך בהקדם.</p>
+  </div>
+</div>
+
+
+
+  <script>
+  const form = document.getElementById("contact-form");
+  const modal = document.getElementById("thankyou-modal");
+  const closeButton = document.querySelector(".close-button");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch("https://formsubmit.co/roigofman@gmail.com", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        modal.style.display = "block";
+        form.reset();
+      } else {
+        alert("אירעה שגיאה בשליחת הטופס.");
+      }
+    })
+    .catch(error => {
+      alert("שגיאה בחיבור או בשרת.");
+      console.error(error);
+    });
+  });
+
+  closeButton.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+
+
 </body>
 </html>
